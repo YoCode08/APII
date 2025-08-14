@@ -9,7 +9,6 @@
             "Authorization": "Basic QjMzOkZSMzM="
         }
     },
-
     {
         "name": "SecuredAPI",
         "method": "post",
