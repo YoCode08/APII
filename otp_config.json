@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Oyo",
+        "method": "post",
+        "url": "https://identity-gateway.oyorooms.com/identity/api/v1/otp/generate_by_phone?locale=id",
+        "data": "{\"phone\": \"target_number\", \"country_code\": \"+62\", \"country_iso_code\": \"ID\", \"nod\": \"4\", \"send_otp\": \"true\", \"devise_role\": \"Consumer_Guest\"}",
+        "headers": {
+            "Host": "identity-gateway.oyorooms.com",
+            "consumer_host": "https://www.oyorooms.com",
+            "accept-language": "id",
+            "access_token": "SFI4TER1WVRTakRUenYtalpLb0w6VnhrNGVLUVlBTE5TcUFVZFpBSnc=",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; SM-A107F) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36",
+            "Content-Type": "application/json",
+            "accept": "*/*",
+            "origin": "https://www.oyorooms.com",
+            "referer": "https://www.oyorooms.com/login",
+            "Accept-Encoding": "gzip,deflate,br"
+        }
+    },
+    {
+        "name": "Volta",
+        "method": "post",
+        "url": "https://auth-production.voltaindonesia.com/v1/client/request-otp",
+        "data": "{\"phoneNumber\": \"target_number\"}",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9,id;q=0.8",
+            "content-type": "application/json",
+            "origin": "https://voltaindonesia.com",
+            "referer": "https://voltaindonesia.com/",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+        }
+    }
+]
