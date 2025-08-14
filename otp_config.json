@@ -1,35 +1,41 @@
 [
-    {
-        "name": "Oyo",
-        "method": "post",
-        "url": "https://identity-gateway.oyorooms.com/identity/api/v1/otp/generate_by_phone?locale=id",
-        "data": "{\"phone\": \"target_number\", \"country_code\": \"+62\", \"country_iso_code\": \"ID\", \"nod\": \"4\", \"send_otp\": \"true\", \"devise_role\": \"Consumer_Guest\"}",
-        "headers": {
-            "Host": "identity-gateway.oyorooms.com",
-            "consumer_host": "https://www.oyorooms.com",
-            "accept-language": "id",
-            "access_token": "SFI4TER1WVRTakRUenYtalpLb0w6VnhrNGVLUVlBTE5TcUFVZFpBSnc=",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 10; SM-A107F) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36",
-            "Content-Type": "application/json",
-            "accept": "*/*",
-            "origin": "https://www.oyorooms.com",
-            "referer": "https://www.oyorooms.com/login",
-            "Accept-Encoding": "gzip,deflate,br"
-        }
-    },
-    {
-        "name": "Volta",
-        "method": "post",
-        "url": "https://auth-production.voltaindonesia.com/v1/client/request-otp",
-        "data": "{\"phoneNumber\": \"target_number\"}",
-        "headers": {
-            "accept": "application/json, text/plain, */*",
-            "accept-encoding": "gzip, deflate, br, zstd",
-            "accept-language": "en-US,en;q=0.9,id;q=0.8",
-            "content-type": "application/json",
-            "origin": "https://voltaindonesia.com",
-            "referer": "https://voltaindonesia.com/",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-        }
+  {
+    "name": "MessageCentral",
+    "method": "post",
+    "url": "https://cpaas.messagecentral.com/verification/v3/send",
+    "data": "{\"customerId\": \"YOUR_CUSTOMER_ID\", \"mobileNumber\": \"target_number\", \"flowType\": \"SMS\", \"otpLength\": 4}",
+    "headers": {
+      "authToken": "your_auth_token"
     }
+  },
+  {
+    "name": "CM.com OTP",
+    "method": "post",
+    "url": "https://gw.cmtelecom.com/v1.0/message",
+    "data": "{\"from\": \"YourBrand\", \"to\": \"target_number\", \"body\": \"Your OTP code is 1234\"}",
+    "headers": {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer YOUR_API_KEY"
+    }
+  },
+  {
+    "name": "GoSMSGateway",
+    "method": "post",
+    "url": "https://api.gosmsgateway.com/send",
+    "data": "{\"to\": \"target_number\", \"message\": \"Your OTP: 123456\"}",
+    "headers": {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer YOUR_API_KEY"
+    }
+  },
+  {
+    "name": "OTPSMSAPI",
+    "method": "post",
+    "url": "https://otpsmsapi.com/api/send",
+    "data": "{\"phone\": \"target_number\", \"message\": \"Your OTP code is 123456\"}",
+    "headers": {
+      "Content-Type": "application/json",
+      "apiKey": "YOUR_API_KEY"
+    }
+  }
 ]
